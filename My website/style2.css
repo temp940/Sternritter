@@ -1,0 +1,493 @@
+
+/* ===================================
+   STERNRITTER - GLOBAL STYLES
+=================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050505;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+
+/* ===================================
+   HEADER AND NAVIGATION
+=================================== */
+
+.site-header {
+  width: 100%;
+  min-height: 100px;
+  padding: 25px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  position: relative;
+  z-index: 10;
+  background-color: #080808;
+  border-bottom: 1px solid rgba(229, 188, 104, 0.18);
+}
+
+.logo {
+  color: #e5bc68;
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  white-space: nowrap;
+}
+
+.logo:hover {
+  text-shadow: 0 0 15px rgba(229, 188, 104, 0.5);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.main-nav a {
+  color: #ddd4c5;
+  font-size: 12px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #e5bc68;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.appointment-btn {
+  color: #e5bc68;
+  border: 1px solid #e5bc68;
+  padding: 14px 20px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+.appointment-btn:hover {
+  background-color: #e5bc68;
+  color: black;
+  box-shadow: 0 0 20px rgba(229, 188, 104, 0.25);
+}
+
+.search-icon {
+  color: #e5bc68;
+  font-size: 25px;
+}
+
+
+/* ===================================
+   HERO BACKGROUND
+=================================== */
+
+.hero {
+  position: relative;
+  min-height: 720px;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.96) 0%,
+      rgba(0, 0, 0, 0.83) 28%,
+      rgba(0, 0, 0, 0.35) 65%,
+      rgba(0, 0, 0, 0.18) 100%
+    ),
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.65),
+      transparent 35%
+    ),
+    url("images/FF.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+/* ===================================
+   HERO TEXT
+=================================== */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 750px;
+  padding: 90px 0 110px 9%;
+}
+
+.hero-subtext {
+  color: #e5bc68;
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
+.hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(60px, 7vw, 110px);
+  font-weight: normal;
+  line-height: 1.08;
+  letter-spacing: -2px;
+  color: #f5f0e8;
+  margin-bottom: 30px;
+}
+
+.hero h1 span {
+  color: #e5bc68;
+  font-style: italic;
+  text-shadow: 0 0 35px rgba(229, 188, 104, 0.12);
+}
+
+.gold-line {
+  width: 70px;
+  height: 2px;
+  background-color: #e5bc68;
+  margin-bottom: 30px;
+}
+
+.hero-description {
+  color: #c7c1b7;
+  font-size: 15px;
+  line-height: 1.9;
+  max-width: 480px;
+  margin-bottom: 40px;
+}
+
+
+/* ===================================
+   HERO BUTTONS
+=================================== */
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 18px 28px;
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #e5bc68;
+  border: 1px solid #e5bc68;
+  color: #080808;
+}
+
+.btn-primary:hover {
+  background-color: #f4d998;
+  box-shadow: 0 0 25px rgba(229, 188, 104, 0.3);
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  color: #f5f0e8;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.btn-secondary:hover {
+  color: #e5bc68;
+  border-color: #e5bc68;
+  background-color: rgba(229, 188, 104, 0.08);
+}
+
+
+/* ===================================
+   HERO SIDE INDICATOR
+=================================== */
+
+.hero-side {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  z-index: 2;
+}
+
+.hero-side span {
+  color: #e5bc68;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.vertical-line {
+  height: 90px;
+  width: 1px;
+  background-color: #e5bc68;
+}
+
+.hero-side p {
+  writing-mode: vertical-rl;
+  color: #ddd4c5;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.hero-bottom {
+  position: absolute;
+  bottom: 35px;
+  left: 9%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #e5bc68;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.hero-bottom span:last-child {
+  font-size: 20px;
+}
+
+
+/* ===================================
+   FOUR FEATURE STRIP
+=================================== */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #0c0b09;
+  border-top: 1px solid rgba(229, 188, 104, 0.25);
+  border-bottom: 1px solid rgba(229, 188, 104, 0.25);
+  padding: 35px 5%;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 15px 25px;
+  border-right: 1px solid rgba(229, 188, 104, 0.2);
+}
+
+.feature:last-child {
+  border-right: none;
+}
+
+.feature h3 {
+  color: #e5bc68;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.feature h2 {
+  color: #f5f0e8;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  color: #99938a;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* ===================================
+   FOOTER
+=================================== */
+
+.site-footer {
+  margin-top: auto;
+  background-color: #050505;
+  padding: 28px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid rgba(229, 188, 104, 0.15);
+}
+
+.site-footer p {
+  color: #827c72;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.footer-center {
+  color: #e5bc68 !important;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #a9a094;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.footer-links a:hover {
+  color: #e5bc68;
+}
+
+
+/* ===================================
+   RESPONSIVE DESIGN - TABLET
+=================================== */
+
+@media (max-width: 1100px) {
+
+  .site-header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    gap: 18px;
+  }
+
+  .hero-content {
+    padding-left: 7%;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature:nth-child(2) {
+    border-right: none;
+  }
+
+  .feature {
+    border-bottom: 1px solid rgba(229, 188, 104, 0.15);
+  }
+
+}
+
+
+/* ===================================
+   RESPONSIVE DESIGN - MOBILE
+=================================== */
+
+@media (max-width: 700px) {
+
+  .site-header {
+    padding: 22px 5%;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+
+  .main-nav {
+    gap: 12px 18px;
+  }
+
+  .main-nav a {
+    font-size: 10px;
+  }
+
+  .appointment-btn {
+    padding: 11px 14px;
+    font-size: 10px;
+  }
+
+  .hero {
+    min-height: 750px;
+    background-position: 60% center;
+    background-attachment: scroll;
+  }
+
+  .hero-content {
+    padding: 80px 7% 120px;
+  }
+
+  .hero-subtext {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 12vw, 75px);
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .hero-side {
+    display: none;
+  }
+
+  .hero-bottom {
+    left: 7%;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    padding: 20px 5%;
+  }
+
+  .feature {
+    border-right: none;
+    padding: 20px 10px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+}
