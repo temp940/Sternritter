@@ -1,0 +1,679 @@
+
+/* ===================================
+   STERNRITTERS - GLOBAL STYLES
+=================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #050505;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+
+/* ===================================
+   HEADER AND NAVIGATION
+=================================== */
+
+.site-header {
+  width: 100%;
+  min-height: 100px;
+  padding: 25px 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  position: relative;
+  z-index: 10;
+
+  background-color: #080808;
+  border-bottom: 1px solid rgba(229, 188, 104, 0.18);
+}
+
+.logo {
+  color: #e5bc68;
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  white-space: nowrap;
+}
+
+.logo:hover {
+  text-shadow: 0 0 15px rgba(229, 188, 104, 0.5);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.main-nav a {
+  color: #ddd4c5;
+  font-size: 12px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #e5bc68;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.appointment-btn {
+  color: #e5bc68;
+  border: 1px solid #e5bc68;
+  padding: 14px 20px;
+
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+.appointment-btn:hover {
+  background-color: #e5bc68;
+  color: black;
+
+  box-shadow: 0 0 20px rgba(229, 188, 104, 0.25);
+}
+
+
+/* ===================================
+   MAIN CONTENT
+=================================== */
+
+main {
+  flex: 1;
+}
+
+
+/* ===================================
+   FOOTER - SAME AS HOMEPAGE
+=================================== */
+
+.site-footer {
+  margin-top: auto;
+  background-color: #050505;
+  padding: 28px 5%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  border-top: 1px solid rgba(229, 188, 104, 0.15);
+}
+
+.site-footer p {
+  color: #827c72;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+
+/* ===================================
+   RESPONSIVE HEADER - TABLET
+=================================== */
+
+@media (max-width: 1100px) {
+
+  .site-header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    gap: 18px;
+  }
+
+}
+
+
+/* ===================================
+   RESPONSIVE HEADER - MOBILE
+=================================== */
+
+@media (max-width: 700px) {
+
+  .site-header {
+    padding: 22px 5%;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+
+  .main-nav {
+    gap: 12px 18px;
+  }
+
+  .main-nav a {
+    font-size: 10px;
+  }
+
+  .appointment-btn {
+    padding: 11px 14px;
+    font-size: 10px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
+
+
+
+
+/* COLLECTIONS PAGE BACKGROUND */
+
+.collections-page {
+  background:
+    radial-gradient(
+      ellipse at 50% 18%,
+      #1b1712 0%,
+      #080808 52%,
+      #050505 100%
+    );
+
+  color: #f5f0e8;
+}
+
+
+/* ==========================================
+   COLLECTIONS INTRODUCTION
+========================================== */
+
+.collections-page .collections-intro {
+  text-align: center;
+  padding: 95px 5% 75px;
+}
+
+.collections-page .collections-eyebrow {
+  color: #e5bc68;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  line-height: 1.8;
+}
+
+.collections-page .collections-intro h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 6vw, 76px);
+  font-weight: normal;
+  letter-spacing: 4px;
+  color: #f5f0e8;
+  margin: 22px 0;
+}
+
+.collections-page .collections-intro h1 span {
+  color: #e5bc68;
+  font-style: italic;
+}
+
+.collections-page .collections-gold-line {
+  width: 75px;
+  height: 2px;
+  background: #e5bc68;
+  margin: 0 auto 30px;
+}
+
+.collections-page .collections-description {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #bcb5aa;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+
+/* ==========================================
+   THREE COLLECTION GRID
+========================================== */
+
+.collections-page .collection-grid {
+  width: 90%;
+  max-width: 1450px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 28px;
+}
+
+
+/* ==========================================
+   COLLECTION CARDS
+========================================== */
+
+.collections-page .collection-card {
+  background: #101010;
+  border: 1px solid rgba(229, 188, 104, 0.18);
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.collections-page .collection-card:hover {
+  transform: translateY(-9px);
+
+  border-color: rgba(229, 188, 104, 0.7);
+
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.65),
+    0 0 25px rgba(229, 188, 104, 0.08);
+}
+
+
+/* ==========================================
+   COLLECTION IMAGES
+========================================== */
+
+.collections-page .collection-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+
+  position: relative;
+  overflow: hidden;
+
+  background: #161616;
+}
+
+.collections-page .collection-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.22) 0%,
+    transparent 30%,
+    transparent 65%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+
+  pointer-events: none;
+}
+
+.collections-page .collection-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+.collections-page .collection-card:hover img {
+  transform: scale(1.055);
+  filter: brightness(1.08);
+}
+
+
+/* IMAGE LABELS */
+
+.collections-page .collection-number {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  z-index: 2;
+
+  color: #f5f0e8;
+  font-size: 11px;
+  letter-spacing: 3px;
+
+  text-shadow: 0 2px 10px #000;
+}
+
+.collections-page .collection-edition {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  z-index: 2;
+
+  color: #e5bc68;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+
+  text-shadow: 0 2px 10px #000;
+}
+
+
+/* ==========================================
+   COLLECTION INFORMATION
+========================================== */
+
+.collections-page .collection-info {
+  padding: 35px 25px 40px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.collections-page .collection-category {
+  color: #e5bc68;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.collections-page .collection-info h2 {
+  color: #f5f0e8;
+  font-family: Georgia, serif;
+  font-size: clamp(21px, 2.2vw, 30px);
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.collections-page .collection-small-line {
+  width: 45px;
+  height: 1px;
+  background: #e5bc68;
+  margin: 0 auto 23px;
+}
+
+.collections-page .collection-description {
+  color: #bcb5aa;
+  font-size: 13px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+}
+
+.collections-page .collection-quote {
+  color: #d8c29b;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+
+/* COLLECTION LINKS */
+
+.collections-page .collection-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  margin-top: auto;
+  padding: 12px 0;
+
+  color: #e5bc68;
+  border-bottom: 1px solid rgba(229, 188, 104, 0.6);
+
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  line-height: 1.6;
+
+  transition: 0.3s ease;
+}
+
+.collections-page .collection-link span {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.collections-page .collection-link:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.collections-page .collection-link:hover span {
+  transform: translateX(5px);
+}
+
+
+/* ==========================================
+   COLLECTION PHILOSOPHY
+========================================== */
+
+.collections-page .collections-philosophy {
+  text-align: center;
+  padding: 115px 6% 105px;
+  margin-top: 105px;
+
+  background: linear-gradient(
+    135deg,
+    #100e0b,
+    #1b1712,
+    #090909
+  );
+
+  border-top: 1px solid rgba(229, 188, 104, 0.2);
+  border-bottom: 1px solid rgba(229, 188, 104, 0.2);
+}
+
+.collections-page .collections-philosophy h2 {
+  color: #f5f0e8;
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 4.5vw, 53px);
+  font-weight: normal;
+  letter-spacing: 2px;
+  line-height: 1.35;
+
+  margin: 25px 0;
+}
+
+.collections-page .collections-philosophy h2 span {
+  color: #e5bc68;
+  font-style: italic;
+}
+
+.collections-page .collections-philosophy > p:last-child {
+  color: #bcb5aa;
+  font-size: 15px;
+  line-height: 1.9;
+
+  max-width: 590px;
+  margin: 0 auto;
+}
+
+
+/* ==========================================
+   APPOINTMENT SECTION
+========================================== */
+
+.collections-page .collections-cta {
+  text-align: center;
+  padding: 105px 5% 115px;
+}
+
+.collections-page .collections-cta h2 {
+  color: #f5f0e8;
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: normal;
+  letter-spacing: 2px;
+
+  margin: 22px 0;
+}
+
+.collections-page .collections-cta > p:not(.collections-eyebrow) {
+  color: #bcb5aa;
+  font-size: 15px;
+  margin-bottom: 35px;
+}
+
+.collections-page .collection-shades,
+.collections-page .collection-appointment {
+  display: inline-block;
+
+  padding: 17px 24px;
+  margin: 8px;
+
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+
+  transition: 0.3s ease;
+}
+
+.collections-page .collection-shades {
+  color: #e5bc68;
+  border: 1px solid #e5bc68;
+}
+
+.collections-page .collection-appointment {
+  color: #080808;
+  background: #e5bc68;
+  border: 1px solid #e5bc68;
+}
+
+.collections-page .collection-shades:hover {
+  color: #080808;
+  background: #e5bc68;
+}
+
+.collections-page .collection-appointment:hover {
+  color: #080808;
+  background: #f4d998;
+  box-shadow: 0 0 25px rgba(229, 188, 104, 0.3);
+  transform: translateY(-3px);
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN - TABLETS
+========================================== */
+
+@media (max-width: 950px) {
+
+  .collections-page .collection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+  }
+
+  .collections-page .collections-intro {
+    padding: 75px 5% 55px;
+  }
+
+  .collections-page .collections-philosophy {
+    padding: 85px 6%;
+    margin-top: 80px;
+  }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN - MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+  .collections-page .collection-grid {
+    grid-template-columns: 1fr;
+    width: 88%;
+    max-width: 440px;
+    gap: 35px;
+  }
+
+  .collections-page .collections-intro {
+    padding: 65px 6% 45px;
+  }
+
+  .collections-page .collections-intro h1 {
+    letter-spacing: 2px;
+  }
+
+  .collections-page .collections-eyebrow {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+  }
+
+  .collections-page .collection-info {
+    padding: 30px 20px 35px;
+  }
+
+  .collections-page .collection-info h2 {
+    font-size: 26px;
+  }
+
+  .collections-page .collections-philosophy {
+    padding: 75px 6%;
+    margin-top: 75px;
+  }
+
+  .collections-page .collections-cta {
+    padding: 80px 6% 90px;
+  }
+
+  .collections-page .collection-shades,
+  .collections-page .collection-appointment {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 12px auto;
+  }
+
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  .collections-page .collection-card,
+  .collections-page .collection-image img,
+  .collections-page .collection-link span {
+    transition: none;
+  }
+
+  .collections-page .collection-card:hover,
+  .collections-page .collection-card:hover img {
+    transform: none;
+  }
+
+}
