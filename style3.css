@@ -253,7 +253,7 @@ a:focus-visible {
   width: 100%;
   min-width: 0;
 
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
 
   background: #101010;
@@ -745,7 +745,7 @@ a:focus-visible {
   }
 
   .suit-preview {
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 4 / 5;
   }
 
   .colour-panel {
